@@ -1,4 +1,0 @@
-revue
-=====
-
-Logitech Revue Hacks
