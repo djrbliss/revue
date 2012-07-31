@@ -1,0 +1,31 @@
+Logitech Revue Hacks
+by Dan Rosenberg (@djrbliss)
+=============================
+
+This project includes three components:
+
+
+1. nandpwn
+
+A local privilege escalation exploit for the Logitech Revue that leverages the
+ability to map the hardware registers of the NAND flash controller in
+conjunction with a Linux kernel information leak to clobber kernel memory in a
+way that allows gaining privileges.
+
+This exploit is highly unstable. Although it has never caused any permanent
+damage in testing, I take no responsibility if this turns your device into a
+brick. In addition, it is known to only succeed a fraction of the time, so you
+will probably have to try it repeatedly, and some of those attempts may cause
+your device to freeze (which can be solved by a reboot).
+
+
+2. codesign
+
+Once you have root, this can be run to disable code signing enforcement so
+custom kernel modules can be run. No known issues were observed during testing.
+
+
+3. blockwrite
+
+Remaps a specified block device as writable at both the MTD and block layers,
+to allow flashing a replacement. No known issues were observed during testing.
